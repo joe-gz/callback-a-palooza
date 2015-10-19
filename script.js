@@ -39,16 +39,7 @@ var byLength = function (A, B) {
 
 var sortedWords = words.sort(byLength);
 
-  //Testing for correct answer
-  var assert = require('assert');
-  try {
-    assert.deepEqual(sortedWords, ['long', 'short', 'medium', 'lengthy', 'interminable']);
-    console.log("Answer to question 2 is correct");
-  }
-  catch (e) {
-    console.log("Answer to question 2 isn't correct yet.");
-  }
-  //End of Test
+
 
 /*===============================================================*/
 
@@ -61,15 +52,7 @@ var sortedWords = words.sort(function (A, B){
   // your code here
 });
 
-  //Testing for correct answer
-  try {
-    assert.deepEqual(sortedWords, ['interminable', 'lengthy', 'medium', 'short', 'long']);
-    console.log("Answer to question 3 is correct");
-  }
-  catch (e) {
-    console.log("Answer to question 3 isn't correct yet.");
-  }
-  //End of Test
+
 
 /*===============================================================*/
 
@@ -99,18 +82,6 @@ function makePower(power) {
 var power2 = makePower(2);
 var power3 = makePower(3);
 
-  //Testing for correct answer
-  try {
-    assert.strictEqual(power2(4), 16);
-    assert.strictEqual(power2(3), 9);
-    assert.strictEqual(power3(2), 8);
-    assert.strictEqual(power3(3), 27);
-    console.log("Answer to question 4 is correct");
-  }
-  catch (e) {
-    console.log("Answer to question 4 isn't correct yet.");
-  }
-  //End of Test
 
 /*=======================================================================
 Adapted from "Callback Hell" by cwilbur and tsyan https://github.com/ga-wdi-boston/wdi_1_js_functions_first_class_quiz/blob/master/quiz.js
