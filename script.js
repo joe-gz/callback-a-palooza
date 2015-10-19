@@ -60,10 +60,19 @@ catch (e) {
 // Question 3
 //
 // What change would you make to your comparison function so that it will sort
-// the words from longest to shortest?  Write it as an anomymous function.
+// the words from longest to shortest?  Write it as an anonymous function.
 
 var sortedWords = words.sort(function (A, B){
   // your code here
+  if(A.length > B.length) {
+    return -1;
+  }
+  else if (B.length > A.length) {
+    return 1;
+  }
+  else {
+    return 0;
+  }
 });
 
 try {
