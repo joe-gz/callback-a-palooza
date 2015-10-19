@@ -10,6 +10,8 @@ function writeDing() {
 
 var dingHandle = setTimeout (writeDing, 3000);
 
+/*===============================================================*/
+
 // Question 2
 
 // Javascript has a built-in sort function, but you need to tell it how to
@@ -46,7 +48,7 @@ var byLength = function (A, B) {
 
 var sortedWords = words.sort(byLength);
 
-  //Testing for correct answer ===============
+  //Testing for correct answer
   var assert = require('assert');
   try {
     assert.deepEqual(sortedWords, ['long', 'short', 'medium', 'lengthy', 'interminable']);
@@ -55,7 +57,9 @@ var sortedWords = words.sort(byLength);
   catch (e) {
     console.log("Answer to question 2 isn't correct yet.");
   }
-  //End of Test===================================
+  //End of Test
+
+/*===============================================================*/
 
 // Question 3
 
@@ -75,7 +79,7 @@ var sortedWords = words.sort(function (A, B){
   }
 });
 
-  //Testing for correct answer ===============
+  //Testing for correct answer
   try {
     assert.deepEqual(sortedWords, ['interminable', 'lengthy', 'medium', 'short', 'long']);
     console.log("Answer to question 3 is correct");
@@ -83,7 +87,9 @@ var sortedWords = words.sort(function (A, B){
   catch (e) {
     console.log("Answer to question 3 isn't correct yet.");
   }
-  //End of Test===================================
+  //End of Test
+
+/*===============================================================*/
 
 // Question 4
 
@@ -120,7 +126,7 @@ function makePower(power) {
 var power2 = makePower(2);
 var power3 = makePower(3);
 
-  //Testing for correct answer ===============
+  //Testing for correct answer
   try {
     assert.strictEqual(power2(4), 16);
     assert.strictEqual(power2(3), 9);
@@ -131,7 +137,7 @@ var power3 = makePower(3);
   catch (e) {
     console.log("Answer to question 4 isn't correct yet.");
   }
-  //End of Test===================================
+  //End of Test
 
 /*====================================
 Adapted from "Callback Hell" by cwilbur and tsyan https://github.com/ga-wdi-boston/wdi_1_js_functions_first_class_quiz/blob/master/quiz.js
