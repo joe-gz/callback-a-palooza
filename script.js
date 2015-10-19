@@ -8,7 +8,7 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout (writeDing, 3000);
 
 // Question 2
 
