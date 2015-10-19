@@ -92,7 +92,7 @@ var sortedWords = words.sort(function (A, B){
 function power(m, n) {
   var result = 1;
 
-  for (var i = 1; i < n; i++) {
+  for (var i = 1; i <= n; i++) {
     result *= m;
   }
 
