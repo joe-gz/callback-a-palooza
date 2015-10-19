@@ -33,12 +33,20 @@ var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
   // your code here
+  if(A.length < B.length) {
+    return -1;
+  }
+  else if (B.length < A.length) {
+    return 1;
+  }
+  else {
+    return 0;
+  }
 };
 
 var sortedWords = words.sort(byLength);
 
-// testing for correct answer
-
+//Testing for correct answer ===============
 var assert = require('assert');
 try {
   assert.deepEqual(sortedWords, ['long', 'short', 'medium', 'lengthy', 'interminable']);
@@ -47,6 +55,7 @@ try {
 catch (e) {
   console.log("Answer to question 2 isn't correct yet.");
 }
+//End of Test===================================
 
 // Question 3
 //
