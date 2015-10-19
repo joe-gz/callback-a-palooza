@@ -106,7 +106,15 @@ function power(m, n) {
 
 function makePower(power) {
   // your code here
+  return function (number) {
+    var result = 1;
 
+    for (var i = 1; i <= power; i++) {
+      result *= number;
+    }
+
+    return result;
+  }
 }
 
 var power2 = makePower(2);
