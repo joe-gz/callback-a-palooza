@@ -89,11 +89,15 @@ function power(m, n) {
 // a number as an argument and return that number raised to the power
 // you specified in the makePower call.
 
-function makePower(power) {
+function makePower(exp) {
   // your code here
+  return function (number){
+    return power(number,exp);
+  }
 }
 
 var power2 = makePower(2);
+console.log(power2(4));
 var power3 = makePower(3);
 
 
