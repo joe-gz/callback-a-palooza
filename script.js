@@ -8,7 +8,7 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout(writeDing, 3000);
 
 /*===============================================================*/
 
@@ -35,10 +35,16 @@ var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
   // your code here
+  if (A.length === B.length) {
+    return 0;
+  } else if (A.length < B.length) {
+    return -1;
+  } else {
+    return 1
+  }
 };
 
 var sortedWords = words.sort(byLength);
-
 
 
 /*===============================================================*/
@@ -48,8 +54,16 @@ var sortedWords = words.sort(byLength);
 // What change would you make to your comparison function so that it will sort
 // the words from longest to shortest?  Write it as an anomymous function.
 
-var sortedWords = words.sort(function (A, B){
+var words3 = ['short', 'medium', 'long', 'interminable', 'lengthy'];
+var sortedWords3 = words3.sort(function (A, B){
   // your code here
+  if (A.length === B.length) {
+    return 0;
+  } else if (A.length > B.length) {
+    return -1;
+  } else {
+    return 1
+  }
 });
 
 
@@ -86,3 +100,36 @@ var power3 = makePower(3);
 /*=======================================================================
 Adapted from "Callback Hell" by cwilbur and tsyan https://github.com/ga-wdi-boston/wdi_1_js_functions_first_class_quiz/blob/master/quiz.js
 ========================================================================*/
+
+var assert = require('assert');
+require('./script.js');
+
+//Testing for Question 2
+try {
+  assert.deepEqual(sortedWords, ['long', 'short', 'medium', 'lengthy', 'interminable']);
+  console.log("Answer to question 2 is correct");
+}
+catch (e) {
+  console.log("Answer to question 2 isn't correct yet.");
+}
+
+//Testing for Question 3
+try {
+  assert.deepEqual(sortedWords3, ['interminable', 'lengthy', 'medium', 'short', 'long']);
+  console.log("Answer to question 3 is correct");
+}
+catch (e) {
+  console.log("Answer to question 3 isn't correct yet.");
+}
+
+//Testing for Question 4
+try {
+  assert.strictEqual(power2(4), 16);
+  assert.strictEqual(power2(3), 9);
+  assert.strictEqual(power3(2), 8);
+  assert.strictEqual(power3(3), 27);
+  console.log("Answer to question 4 is correct");
+}
+catch (e) {
+  console.log("Answer to question 4 isn't correct yet.");
+}
